@@ -43,6 +43,7 @@ function Auth() {
                 window.localStorage.setItem("uid",result.user.uid);
                 window.localStorage.setItem("uname",result.user.displayName);
                 window.localStorage.setItem("uavatar",avatar);
+                window.localStorage.setItem("uemail",result.user.emailVerified);
                 let data = await DataService.getData("users",result.user.uid)
                 let keyGenerated = data?._document?.data?.value?.mapValue?.fields?.keyGenerated?.booleanValue;
                 if(keyGenerated === true) navigate('/')
@@ -69,6 +70,7 @@ function Auth() {
                 window.localStorage.setItem("uid",result.user.uid);
                 window.localStorage.setItem("uname",result.user.displayName);
                 window.localStorage.setItem("uavatar",avatar);
+                window.localStorage.setItem("uemail",result.user.emailVerified);
                 DataService.addData("users",result.user.uid,{ name : result?.user?.displayName ,email : result?.user?.email , avatar : avatar, keyGenerated : false, uid : result?.user?.uid, friends : []})
                 setSucess(true);
                 setTimeout(() => {

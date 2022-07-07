@@ -12,10 +12,12 @@ import Message from './message/Message';
 import Default from './components/Default';
 import { useNavigate } from 'react-router-dom';
 import DataService from './fire/FirebaseOperations'
+import Profile from './components/Profile';
 
 function App() {
 
   const [search, searchFriend] = useState(false)
+  const [profile, setProfile] = useState(false)
   const navigate = useNavigate();
   const [uid, setUid] = useState();
 
@@ -25,7 +27,13 @@ function App() {
   const [friend, setFriend] = useState({});
 
 
-
+  const showProfile = () => {
+       searchFriend(false)
+       setProfile(true)
+  }
+  const hideProfile = () => {
+    setProfile(false)
+  }
   const closeMessage =()=>{
         showMessage(false)
   }
@@ -53,6 +61,7 @@ function App() {
     console.log(friend)
     setFriend(friend)
     searchFriend(false);
+    setProfile(false)
     showMessage(true);
   }
 
@@ -74,7 +83,7 @@ function App() {
                       More
                     </button>
                     <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                      <a className="dropdown-item" href="#">Profile</a>
+                      <a className="dropdown-item" href="#" onClick={() => showProfile()}>Profile</a>
                       <a className="dropdown-item" href="#" onClick={() => showSearchFriend()}>Search Friends</a>
                     </div>
                   </div>
@@ -82,8 +91,8 @@ function App() {
                 <ContactList handleContactClick={handleContactClick}/>
                 </div>
              
-                {search || message || xxx ? <div className="col-sm-8 col-right">
-                {search ? <SearchFriend hideSearchFriend={hideSearchFriend}/> : message ?  <Message closeMessage={closeMessage} friend={friend} uid={uid}/> : <Default/>}
+                {search || profile || message || xxx ? <div className="col-sm-8 col-right">
+                {search ? <SearchFriend hideSearchFriend={hideSearchFriend}/> : profile ? <Profile></Profile> : message ?  <Message closeMessage={closeMessage} friend={friend} uid={uid}/> : <Default/>}
                 </div> : <></> }
               </div>
           </div>

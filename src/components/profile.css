@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap');
+
+.profile-container{
+    height: 100% !important;
+    background-color: white !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10vh;
+}
+
+.profile-container h3{
+    margin-top: 15px;
+    font-family: 'Arima', cursive;
+    color: #302F4E;
+
+}
+.profile-container h6{
+   
+}
+.profile-container h5{
+    color: black;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+.profile-container p{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.card-container {
+	background-color: #E7EBEF;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+
+.card-container .round {
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+	padding: 7px;
+    width: 100px;
+}
+
+button.primary {
+	background-color: #03BFCB;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+
+button.primary.ghost {
+	background-color: transparent;
+	color: #02899C;
+}
+
+.skills {
+	background-color: #1F1A36;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.skills ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skills ul li {
+	border: 1px solid #2D2747;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+}
