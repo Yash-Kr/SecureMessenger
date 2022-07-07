@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+
+.container{
+  margin-top: 10vh;
+  height: 80vh !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[class^="col-"]{
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row{
+  border-radius: 10px;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.col-left{
+  border-right: 1px solid rgb(206, 202, 202);
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.contacts-title{
+  background: #302f4e !important;
   color: white;
+  border-top-left-radius: 10px;
+  height: 60px;
+  text-align: center;
+  position: relative;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.contacts-title span{
+   position: absolute;
+   left: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dropdown{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+}
+.more{
+  background-color: rgb(193, 189, 189) !important;
+  color: #102770 !important;
+  box-shadow: none !important;
+}
+
+
+
+@media only screen and (max-width: 992px){
+  .rcw-header .contact-name span{
+    margin-left: 20px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 768px){
+  body{
+    background-color: white;
+    position: relative;
   }
+  .container{
+    margin-top: 0;
+  }
+  .app-container{
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  .col-left{
+    display: block;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  .col-right{
+    background-color: white !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  .contacts-title{
+    border-radius: 0;
+  }
+  
+}
+
+@media (min-width: 576px){
+ 
 }

@@ -1,0 +1,89 @@
+.search-friend-section{
+    height: 100% !important;
+    background-color: white !important;
+    padding-top: 10vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-bar{
+    height: 60px;
+    padding: 10px 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+  .search-bar input{
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 90%;
+    background-color: #EFF2F5;
+    border-radius: 10px;
+    padding: 5px 30px;
+  }
+  .search-bar button{
+    background-color: #EFF2F5;
+  }
+  
+  .friend-found{
+    background-color: #BDF2D5;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .friend-found button{
+    padding: 10px !important;
+    background-color: white !important;
+  }
+
+  .back-btn{
+    display: none;
+  }
+
+
+@media only screen and (max-width: 992px){
+    .rcw-header .contact-name span{
+      margin-left: 20px;
+    }
+  
+    .search-bar{
+      padding: 10px;
+    }
+    .search-bar input{
+      width: 90%;
+      padding: 5px 10px;
+    }
+    .search-bar button{
+      font-size: 16px;
+      margin: 0;
+      border-radius: 10px;
+      padding: 5px !important
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .search-friend-section{
+      border-radius: 0;
+      background-color: #353353e2 !important;
+    }
+    .search-bar input{
+      width: 85%;
+      padding: 5px 10px;
+    }
+    .search-bar button{
+      background-color: white !important;
+    }
+    .friend-found{
+      width: 85%;
+    }
+    .back-btn{
+      display: block;
+    }
+    .back-btn{
+      width: 85%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+   
+  }

@@ -1,0 +1,25 @@
+.contact-list-container{
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+}
+
+.contact-item{
+    width: 100%;
+    border-bottom: 1px solid rgb(221, 216, 216);
+    cursor: pointer;
+}
+.contact-item:hover{
+    background-color: #ecedef;
+}
+
+.selected{
+    background-color: #dadcde;
+}
+.selected:hover{
+    background-color: #dadcde;
+}
+
+@media only screen and (max-width: 768px){
+    
+}

@@ -1,0 +1,122 @@
+#rcw-conversation-container{
+    display: block;
+    margin: 0 auto;
+    box-shadow: none;
+    height: 80vh !important;
+  }
+  .rcw-messages-container{
+    display: block !important;
+    min-height: calc(80vh - 105px);
+    padding-bottom: 1vw !important;
+  
+  }
+  
+  #messages{
+    background-image: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: block;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+  
+  .rcw-header{
+    width: 100% !important;
+    height: 60px !important;
+    padding: 0 !important;
+    background: #302f4e !important;
+    text-align: center;
+    padding: 0 10px !important;
+  }
+  .rcw-header .row{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .rcw-header .contact-img{
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin: 7px 0;
+    border-radius: 100%;
+  }
+  .rcw-header .contact-name{
+    text-align: left;
+    line-height: 50px;
+  }
+  .rcw-header .contact-name span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-left: 10px;
+  }
+  
+  .rcw-sender {
+    position: absolute !important;
+    width: 100%;
+    bottom: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  .decrypt-btn{
+    margin-top: 15px;
+  }
+
+  .rcw-input{
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+  }
+ 
+
+
+  .rcw-header {
+    height: 40px;
+    border-top-left-radius: 0 !important;
+  }
+  
+  .rcw-response .rcw-message-text{
+    background-color: #FFB3B3!important;
+    border-bottom: 1px solid rgb(166, 164, 164) !important;
+  }
+  .rcw-message-text{
+    background-color: #FFF6BE !important;
+    border-bottom: 1px solid rgb(166, 164, 164) !important;
+  }
+  .iconify-back{
+    display: none !important;
+  }
+
+  
+  @media only screen and (max-width: 768px){
+    .col-sm-1 {
+      flex: 0 0 auto !important;
+      width: 25% !important;
+  }
+    .col-sm-9 {
+        flex: 0 0 auto !important;
+        width: 45% !important;
+    }
+    .col-sm-2 {
+      flex: 0 0 auto !important;
+      width: 30% !important;
+  }
+  .rcw-messages-container{
+    height: 73vh;
+  }
+  #rcw-conversation-container{
+    height: 100vh !important;
+  }
+  .rcw-sender {
+    position: fixed !important;
+    width: 100%;
+    bottom: 10vh !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  .iconify-back{
+    display: inline-block !important;
+    margin-right: 5px !important;
+  }
+ 
+  }

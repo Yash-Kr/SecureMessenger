@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.key-config{
+    background-color: white;
+    border-radius: 10px;
+}
+.key-config .box{
+    height: 100%;
+  padding: 40px 10%;
+  text-align: center;
+}
+.key-config h1 img{
+    display: inline-block;
+    height: 100%;
+    width: 1.2em;
+    margin-right: 10px;
+}
+
+.key-config h5{
+    margin-bottom: 100px;
+}
+
+.key-config ul{
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+    list-style: decimal;
+    margin-top: 50px;
+}
+.key-config ul h6{
+    font-size: 1.6rem;
+    font-family: 'Caveat', cursive;
+}
+.key-config .generate{
+    margin-left: 10px;
+}
+
+.key-config .continue{
+    margin-top: 50px;
+}
+.key-config input{
+    border: none;
+    outline: none;
+    background-color: #F0F3F4;
+    border-radius: 15px;
+    padding: 0.5em 1em;
+}
+
+@media only screen and (max-width: 992px){
+    .key-config  ul{
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .key-config{
+        min-height: 100vh !important;
+        overflow-y: scroll !important;
+    }
+    .key-config .box{
+        padding: 20px 5%;
+    }
+    .key-config  ul{
+        width: 100% !important;
+        padding-bottom: 30px !important;
+    }
+    .key-config ul li{
+        font-size: 0.8rem;
+    }
+    .key-config h5{
+        font-size: 1rem;
+    }
+   
+}

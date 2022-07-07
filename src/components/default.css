@@ -1,0 +1,37 @@
+.default-container{
+    height: 100% !important;
+    background-color: white !important;
+    padding: 0 10%;
+    padding-top: 20%;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.default-container img{
+    display: block;
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.default-container h2,h5,h6{
+    text-align: center;
+}
+.default-container h2,h5{
+    margin: 25px auto;
+    width: 90%;
+}
+.default-container h5,h6{
+    color: #626262;
+}
+.default-container h5{
+    font-size: 1rem;
+}
+
+.default-container h6{
+    width: 80%;
+    position: absolute;
+    bottom: 5%;
+    font-size: 1rem;
+}

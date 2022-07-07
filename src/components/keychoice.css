@@ -1,0 +1,22 @@
+.rsa,.aes{
+    margin: 15px;
+}
+.rsa span, .aes span {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.common span:hover{
+   cursor: pointer ;
+}
+
+.selected-key span{
+    background-color: #BDF2D5;
+}
+
+@media only screen and (max-width: 768px){
+    .common span:hover{
+        cursor: none ;
+     }
+}
