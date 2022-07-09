@@ -43,7 +43,7 @@ function Auth() {
                 window.localStorage.setItem("uid",result.user.uid);
                 window.localStorage.setItem("uname",result.user.displayName);
                 window.localStorage.setItem("uavatar",avatar);
-                window.localStorage.setItem("uemail",result.user.emailVerified);
+                window.localStorage.setItem("uemail",result.user.email);
                 let data = await DataService.getData("users",result.user.uid)
                 let keyGenerated = data?._document?.data?.value?.mapValue?.fields?.keyGenerated?.booleanValue;
                 if(keyGenerated === true) navigate('/')
@@ -70,7 +70,7 @@ function Auth() {
                 window.localStorage.setItem("uid",result.user.uid);
                 window.localStorage.setItem("uname",result.user.displayName);
                 window.localStorage.setItem("uavatar",avatar);
-                window.localStorage.setItem("uemail",result.user.emailVerified);
+                window.localStorage.setItem("uemail",result.user.email);
                 DataService.addData("users",result.user.uid,{ name : result?.user?.displayName ,email : result?.user?.email , avatar : avatar, keyGenerated : false, uid : result?.user?.uid, friends : []})
                 setSucess(true);
                 setTimeout(() => {
@@ -157,6 +157,7 @@ function Auth() {
   return (
 	<div className="section auth-container">
     <div className="container">
+    <div data-aos="fade-right" data-aos-duration="1500" className='app-name'>  <h1 >Secure Messenger <img src='./img/shield.png'></img> </h1></div>
         <div className="row justify-content-center">
             <div className="col-12 text-center align-self-center">
                 <div className="section pb-5 pt-5 pt-sm-2 text-center">
@@ -171,7 +172,7 @@ function Auth() {
                                         <h4 className="mb-4 pb-3">Log In</h4>
                 
                                         <div className="form-group mt-2">
-                                          <button onClick={() => handleLogin()}> Sign in with Google</button>
+                                        <a href="#" className="btn-auth btn-auth-social btn-auth-google" onClick={() => handleLogin()}><i className="fa fa-google"> <span className="iconify google" data-icon="akar-icons:google-fill"></span></i> Log in with Google</a>
                                         </div>
                                       </div>
                                   </div>
@@ -204,7 +205,7 @@ function Auth() {
                                             {/* <input type="file"  id='image-uploader' onChange={uploadImage} style={{display:"none"}}/> */}
                                         </div>
 
-                                        <button onClick={() => handleSignup()}> Sign up with Google</button>
+                                         <a href="#" className="btn-auth btn-auth-social btn-auth-google" onClick={() => handleSignup()}><i className="fa fa-google"> <span className="iconify google" data-icon="akar-icons:google-fill"></span></i> Sign up with Google</a>
                                       </div>
                                   </div>
                               </div>
@@ -214,6 +215,8 @@ function Auth() {
               </div>
           </div>
     </div>
+    <div className='footer'>Made with &#9829; by  <a id='yash'  href='https://www.linkedin.com/in/yash-kr/' target="_blank"> Yash</a></div>
+          <a className='github-btn' href='https://github.com/Yash-Kr/SecureMessenger' target="_blank">Give it a<span style={{color:"yellow"}}>	&#11088;</span> on Github !</a>
 </div>
   )
 }

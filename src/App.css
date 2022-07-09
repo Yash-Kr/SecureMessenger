@@ -1,9 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 .container{
-  margin-top: 10vh;
+  margin-top: 0vh;
   height: 80vh !important;
 }
-
+.app-name{
+  margin: 3vh 0;
+  text-align: center;
+  color: white;
+  font-family: 'Courgette', cursive;
+}
+.app-name img{
+  width: 50px;
+  height: 50px;
+}
 [class^="col-"]{
   padding: 0;
 }
@@ -47,6 +57,81 @@
   box-shadow: none !important;
 }
 
+.footer{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding-bottom: 10px;
+}
+ #yash{
+  color: yellow;
+  text-decoration: none;
+  border-bottom: 1px solid yellow;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ========== Github Button ++++++++++++*/
+/* From uiverse.io by @ShadowShahriar */
+.github-btn {
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5em 1em;
+  border: 0;
+  background-color: #212121;
+  border-radius: 20px;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 2;
+  font-size: 1em;
+  text-decoration: none;
+ }
+ .github-btn:hover{
+  color: white;
+ }
+ .github-btn span{
+  color: yellow !important;
+ }
+ 
+ .github-btn::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+ }
+ 
+ .github-btn:hover::after {
+  animation-play-state: running;
+ }
+ 
+ @keyframes rotate-hue {
+  to {
+   filter: hue-rotate(1turn);
+  }
+ }
+ 
+ .github-btn,
+ .github-btn::after {
+  box-sizing: border-box;
+ }
+ 
+ .github-btn:active {
+  --border-width: 5px;
+ }
 
 
 @media only screen and (max-width: 992px){
@@ -87,6 +172,24 @@
   .contacts-title{
     border-radius: 0;
   }
+
+  .app-name{
+   color: black;
+  }
+  .footer{
+    color: black;
+    position: relative;
+  }
+  #yash{
+    color: red !important;
+  }
+  .github-btn{
+    position: relative;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+  }
+   
   
 }
 

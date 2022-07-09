@@ -30,6 +30,8 @@ function KeyConfig() {
 
   if(!window.localStorage.getItem('uid')) navigate('/auth')
   return (
+    <div>
+      <div data-aos="fade-right" data-aos-duration="1500" className='app-name'>  <h1 >Secure Messenger <img src='./img/shield.png'></img> </h1></div>
     <div className='container key-config'>
         <div className='box'>
             <h1> <img src="./img/key.png"></img> Key Configuration</h1>
@@ -46,6 +48,8 @@ function KeyConfig() {
                 <li>Messages are completely End-to-End encrypted i.e. No one can decrypt your messages expect You, as you will be the only person who knows the right password.</li>
             </ul>
         </div>
+    </div>
+    <div className='footer'>Made with &#9829; by  <a id='yash'  href='https://www.linkedin.com/in/yash-kr/' target="_blank"> Yash</a></div>
     </div>
 
   )

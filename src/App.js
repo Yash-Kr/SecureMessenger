@@ -46,6 +46,14 @@ function App() {
     searchFriend(false)
   }
 
+  const logout = () => {
+      window.localStorage.setItem("uid","");
+      window.localStorage.setItem("uname","");
+      window.localStorage.setItem("uavatar","");
+      window.localStorage.setItem("uemail","");
+      navigate("/auth");
+    }
+
   useEffect(() => {
     // eslint-disable-next-line no-restricted-globals
     if(screen.width < 768) setDefault(false)
@@ -74,6 +82,7 @@ function App() {
     if(!window.localStorage.getItem('uid')) navigate('/auth')
     return (
       <div className="App">
+          <div data-aos="fade-right" data-aos-duration="1500" className='app-name'>  <h1 >Secure Messenger <img src='./img/shield.png'></img> </h1></div>
           <div className='container app-container'>
              <div className="row container-row no-gutters">
                 <div className="col-sm-4 col-left">
@@ -85,6 +94,7 @@ function App() {
                     <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                       <a className="dropdown-item" href="#" onClick={() => showProfile()}>Profile</a>
                       <a className="dropdown-item" href="#" onClick={() => showSearchFriend()}>Search Friends</a>
+                      <a className="dropdown-item" href="#" onClick={() => logout()}>Logout</a>
                     </div>
                   </div>
                 </Typography>
@@ -97,7 +107,8 @@ function App() {
               </div>
           </div>
          
-        
+          <div className='footer'>Made with &#9829; by  <a id='yash'  href='https://www.linkedin.com/in/yash-kr/' target="_blank"> Yash</a></div>
+          <a className='github-btn' href='https://github.com/Yash-Kr/SecureMessenger' target="_blank">Give it a<span style={{color:"yellow"}}>	&#11088;</span> on Github !</a>
       </div>
     );
 }

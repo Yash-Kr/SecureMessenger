@@ -353,6 +353,64 @@
   width: max-content !important;
 }
 
+/*--------------------
+Buttons
+--------------------*/
+.btn-auth {
+  display: block;
+  width: 70%;
+  background: #bded7d;
+  color: white;
+  text-decoration: none;
+  padding: 15px 15px;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+.btn-auth::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.btn-auth:hover::after {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-auth-social {
+  padding-left: 64px;
+  position: relative;
+  z-index: 1;
+}
+.btn-auth-social .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 50px;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  line-height: 3.2;
+  border-radius: 5px 0 0 5px;
+}
+.google{
+  font-size: 2rem;
+}
+
+.btn-auth-google {
+  background-color: #de4e3b;
+}
+.btn-auth-google:hover{
+    background-color: #de4e3b;
+    color: white !important;
+}
 
 
 @media only screen and (max-width: 768px){
